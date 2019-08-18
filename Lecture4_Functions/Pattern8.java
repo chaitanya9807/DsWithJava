@@ -11,21 +11,23 @@ import java.util.Scanner;
     55555
 
  */
+
 public class Pattern8 {
-    public static void PatternPrint8(int n){
-        for(int i=1;i<=n;i++){
-            for(int sp=1;sp<=n-i;sp++){
+    public static void PatternPrint8(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int sp = 1; sp <= n - i; sp++) {
                 System.out.print(" ");
             }
-            for(int c=1;c<=i;c++){
+            for (int c = 1; c <= i; c++) {
                 System.out.print(i);
             }
             System.out.println();
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int n=s.nextInt();
+        int n = s.nextInt();
         PatternPrint8(n);
     }
 }

@@ -40,7 +40,7 @@ public class SpiralPrinting {
                 c++;
             }
             rowEnd--;
-            for (int i = rowEnd;  c <= n && i >= rowStart; i--){
+            for (int i = rowEnd; c <= n && i >= rowStart; i--) {
                 System.out.print(arr[i][colStart] + " ");
                 c++;
             }

@@ -12,19 +12,20 @@ import java.util.Scanner;
 
  */
 public class Pattern11 {
-    public static void PatternPrint11(int n){
-        for(int i=1;i<=n;i++){
-            int a=i;
-            for(int c=1;c<=i;c++){
+    public static void PatternPrint11(int n) {
+        for (int i = 1; i <= n; i++) {
+            int a = i;
+            for (int c = 1; c <= i; c++) {
                 System.out.print(a);
                 a++;
             }
             System.out.println();
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int n=s.nextInt();
+        int n = s.nextInt();
         PatternPrint11(n);
     }
 }

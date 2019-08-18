@@ -22,10 +22,9 @@ public class SelectionSort {
 
     public static void SelectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-            int min = arr[i], pos = i;
+            int pos = i;
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < min) {
-                    min = arr[j];
+                if (arr[j] < arr[pos]) {
                     pos = j;
                 }
             }
@@ -33,7 +32,7 @@ public class SelectionSort {
                 int temp = arr[i];
                 arr[i] = arr[pos];
                 arr[pos] = temp;
-             }
+            }
         }
     }
 

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PrintKeypadCombinations {
     public static Scanner s = new Scanner(System.in);
+
     public static String[] Keypad(int n) {
         if (n == 2) {
             String[] retval = {"a", "b", "c"};
@@ -31,17 +32,19 @@ public class PrintKeypadCombinations {
             return retval;
         } else return new String[]{""};
     }
-    public static void PrintKeypad(int n,String outputSoFar){
-        if(n==0){
+
+    public static void PrintKeypad(int n, String outputSoFar) {
+        if (n == 0) {
             System.out.println(outputSoFar);
             return;
         }
-        String[] CurrentKewCombinations=Keypad(n%10);
-        for(String str:CurrentKewCombinations){
-            PrintKeypad(n/10,str+outputSoFar);
+        String[] CurrentKewCombinations = Keypad(n % 10);
+        for (String str : CurrentKewCombinations) {
+            PrintKeypad(n / 10, str + outputSoFar);
         }
     }
-    public static void main(String[] args){
-        PrintKeypad(s.nextInt(),"");
+
+    public static void main(String[] args) {
+        PrintKeypad(s.nextInt(), "");
     }
 }

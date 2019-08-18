@@ -12,7 +12,7 @@ public class SumOfTwoNumbers {
         Scanner s = new Scanner(System.in);
         int a = s.nextInt();
         int b = s.nextInt();
-        int sum = findSum(a,b);
+        int sum = findSum(a, b);
         System.out.print(sum);
     }
 }

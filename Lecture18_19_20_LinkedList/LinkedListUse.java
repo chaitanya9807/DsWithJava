@@ -162,15 +162,15 @@ public class LinkedListUse {
         return head;
     }
 
-    public static LinkedListNode<Integer> ReturnMiddleNode(LinkedListNode<Integer> head) {
-        LinkedListNode<Integer> Slow = head;
-        LinkedListNode<Integer> Fast = head;
-        while (Fast.next != null && Fast.next.next != null) {
-            Slow = Slow.next;
-            Fast = Fast.next.next;
+        public static LinkedListNode<Integer> ReturnMiddleNode(LinkedListNode<Integer> head) {
+            LinkedListNode<Integer> Slow = head;
+            LinkedListNode<Integer> Fast = head;
+            while (Fast.next != null && Fast.next.next != null) {
+                Slow = Slow.next;
+                Fast = Fast.next.next;
+            }
+            return Slow;
         }
-        return Slow;
-    }
 
     public static LinkedListNode<Integer> ReverseLL(LinkedListNode<Integer> head) {
         LinkedListNode<Integer> Current = head;
@@ -297,7 +297,7 @@ public class LinkedListUse {
         LinkedListNode<Integer> second = head;
         int i = 0;
         while (i < n) {
-            if(second == null){
+            if (second == null) {
                 return null;
             }
             second = second.next;
